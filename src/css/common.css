@@ -1,0 +1,168 @@
+html,
+body {
+  background: #f0f0f0;
+  color: #505050;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font: 14px \5b8b\4f53,'Helvetica Neue',Arial;
+  line-height: 20px;
+}
+
+html,
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html,
+body,
+form,
+fieldset,
+p,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-text-size-adjust: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+image,
+fieldset {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+input[type=button] {
+  -webkit-appearance: none;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #969;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #969;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: #969;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #969;
+}
+
+input::-webkit-input-speech-button {
+  display: none;
+}
+
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.block {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.layer-sep {
+  height: 10px;
+  background: #eee;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}

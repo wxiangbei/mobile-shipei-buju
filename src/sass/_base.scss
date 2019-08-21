@@ -1,0 +1,27 @@
+$layer-sep-color:#eee;
+$bd-color:#e7e7e7;
+$border-color:#ccc;
+@mixin border1px($bd-color:#ccc,$top:1,$right:0,$bottom:1,$left:0){
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            left: 0;
+            top: 0;
+            transform-origin: left top;
+            transform: scale(.5,.5);
+            border: 1px solid $bd-color;
+            box-sizing: border-box;
+           @if $top !=1{
+               border-top:none;
+           }
+           @if $right !=1{
+               border-right:none;
+           }
+           @if $bottom !=1{
+               border-bottom:none;
+           }
+           @if $left !=1{
+               border-left:none;
+           }
+}

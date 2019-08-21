@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 设置缓存 -->
+    <!-- 设定网页到期时间 -->
+    <meta http-equiv="Expires" content="-1">
+    <!-- 清除缓存（在访问这个网站需要重新下载） -->
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <!-- 禁止浏览器从本地的缓存中调阅网页内容，访问者无法脱机浏览 -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <!-- author用于定义网页作者 -->
+    <meta name="author" content="">
+    <!-- 就是当点击网页添加至主屏幕功能时，会在主屏幕上生成一个图标 点击该图标会进入webapp -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- 当启动webapp功能时 显示手机号 时间 电池的顶部导航栏颜色。默认default -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 添加到主屏幕后 app全屏显示 -->
+    <meta name="apple-touch-fullscreen" content="yes">
+    <!-- 默认设备会自动识别任何可能是电话和 邮箱的字符串 设置telephone=no可以禁用这个功能 -->
+    <meta name='format-detection' content="telephone=no,email=no">
+    <!--uc浏览器私有  -->
+    <!-- 全屏模式 -->
+    <meta name="full-screen" content="yes">
+    <!-- 应用模式 -->
+    <meta name="browsermode" content="application">
+    <!--qq浏览器私有  -->
+    <!-- 全屏模式 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- 应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+
+    <!-- ios下页面自动启动加载时显示的图片 避免加载时白屏 -->
+    <!-- <link rel="apple-touch-startup-image" href="start.png"> -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./font/font_shop/iconfont.css">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/zepto.min.js"></script>
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/indexData.js"></script>
+    <script src="./js/common.js"></script>
+    <title>yx</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 顶部搜索区域 -->
+        <header class="top_hd">
+            <div class="logo_wrap">
+
+            </div>
+            <div class="srch_wrap">
+                <input id="srchTxt" type="text" class="srch_text" placeholder="搜索商品/商铺">
+                <i id="btnSrch" class="icon iconfont">&#xe610</i>
+            </div>
+            <div class="msg_wrap">
+                <i class="icon iconfont">&#xe71c</i>
+                <span>消息</span>
+            </div>
+        </header>
+        <!--  -->
+        <div class="scroll_view">
+            <!-- banner 轮播图区域 -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img  src="./img/1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img  src="./img/2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img  src="./img/3.png" alt=""></div>
+                    <div class="swiper-slide"><img  src="./img/4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img  src="./img/5.jpg" alt=""></div>
+                    <div class="swiper-slide"><img  src="./img/6.jpg" alt=""></div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+                <!-- 如果需要导航按钮 -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+
+                <!-- 如果需要滚动条 -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+            <!-- 网站导航区域 -->
+            <div class="site-nav-wrap">
+                <div class="layer-sep"></div>
+                <ul class="site-nav">
+                   <!-- (li.site-nav-item>a[href=#]>i.icon,iconfont+p{母婴品})*4 -->
+                   <li class="site-nav-item">
+                       <a href="#">
+                           <i class="icon iconfont">&#xe60d</i>
+                           <p>母婴品</p>
+                       </a>
+                   </li>
+                   <li class="site-nav-item">
+                       <a href="#">
+                           <i class="icon iconfont">&#xe60d</i>
+                           <p>超市购</p>
+                       </a>
+                   </li>
+                   <li class="site-nav-item">
+                       <a href="#">
+                           <i class="icon iconfont">&#xe60d</i>
+                           <p>秒杀品</p>
+                       </a>
+                   </li>
+                   <li class="site-nav-item">
+                       <a href="#">
+                           <i class="icon iconfont">&#xe60d</i>
+                           <p>充值品</p>
+                       </a>
+                   </li>
+                </ul>
+                <div class="layer-sep"></div>
+            </div>
+            <!-- 网站内容区域  -->
+            <!-- 秒杀区域 -->
+            <div class="layer ms-layer">
+                <div class="layer-hd">
+                   <div class="hd-l">
+                       <div class="hd-title">
+                           <i class="icon iconfont">&#xe646</i>
+                           <span>秒杀</span>
+                       </div>
+                       <!-- 秒杀时钟 -->
+                       <div class="time-wrap clearfix" id="msTimerBox">
+                         <!-- sapn.time-num{$}*6   -->
+                         <sapn class="time-num">0</sapn>
+                         <sapn class="time-num">0</sapn><span class="time-sep">:</span><sapn class="time-num">0</sapn>
+                         <sapn class="time-num">0</sapn><span class="time-sep">:</span><sapn class="time-num">0</sapn>
+                         <sapn class="time-num">0</sapn> 
+                       </div>
+                   </div>
+                   <div class="hd-r">
+                       <a href="#">
+                           <span>更多</span>
+                           <i class="icon iconfont">&#xe78a</i>
+                       </a>
+                   </div>
+                </div>
+                <div class="layer-bd">
+                    <ul class="layer-bd-list">
+                        <li class="bd-list-item">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <div class="item-des">
+                                ￥ 99.9
+                            </div>
+                        </li>
+                        <li class="bd-list-item">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <div class="item-des">
+                                ￥ 99.9
+                            </div>
+                        </li>
+                        <li class="bd-list-item">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                            <div class="item-des">
+                                ￥ 99.9
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layer-sep"></div>
+             <!-- 运动区域 -->
+             <div class="layer ld-layer">
+                <div class="layer-hd">
+                   <div class="hd-l">
+                       <div class="hd-title">
+                           <i class="icon iconfont">&#xe60e</i>
+                           <span>运动</span>
+                       </div>
+                   </div>
+                   <div class="hd-r">
+                       <a href="#">
+                           <span>更多</span>
+                           <i class="icon iconfont">&#xe78a</i>
+                       </a>
+                   </div>
+                </div>
+                <div class="layer-bd">
+                    <ul class="layer-bd-list">
+                        <li class="bd-list-item yd-bd-l">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </li>
+                        <li class="bd-list-item yd-bd-r">
+                           <div class="bd-r-top bd-r-item">
+                            <a href="#">
+                                <img class="bd-r-item-1" src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="bd-r-item-2" src="" alt="">
+                            </a>
+                           </div>
+                           <div class="bd-r-bottom bd-r-item">
+                            <a href="#">
+                                <img class="bd-r-item-2" src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="bd-r-item-1" src="" alt="">
+                            </a>
+                           </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <!-- 运动区域 -->
+             <div class="layer ld-layer">
+                <div class="layer-hd">
+                   <div class="hd-l">
+                       <div class="hd-title">
+                           <i class="icon iconfont">&#xe60e</i>
+                           <span>运动</span>
+                       </div>
+                   </div>
+                   <div class="hd-r">
+                       <a href="#">
+                           <span>更多</span>
+                           <i class="icon iconfont">&#xe78a</i>
+                       </a>
+                   </div>
+                </div>
+                <div class="layer-bd">
+                    <ul class="layer-bd-list">
+                        <li class="bd-list-item yd-bd-l">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </li>
+                        <li class="bd-list-item yd-bd-r">
+                           <div class="bd-r-top bd-r-item">
+                            <a href="#">
+                                <img class="bd-r-item-1" src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="bd-r-item-2" src="" alt="">
+                            </a>
+                           </div>
+                           <div class="bd-r-bottom bd-r-item">
+                            <a href="#">
+                                <img class="bd-r-item-2" src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="bd-r-item-1" src="" alt="">
+                            </a>
+                           </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <!-- 运动区域 -->
+             <div class="layer ld-layer">
+                <div class="layer-hd">
+                   <div class="hd-l">
+                       <div class="hd-title">
+                           <i class="icon iconfont">&#xe60e</i>
+                           <span>运动</span>
+                       </div>
+                   </div>
+                   <div class="hd-r">
+                       <a href="#">
+                           <span>更多</span>
+                           <i class="icon iconfont">&#xe78a</i>
+                       </a>
+                   </div>
+                </div>
+                <div class="layer-bd">
+                    <ul class="layer-bd-list">
+                        <li class="bd-list-item yd-bd-l">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </li>
+                        <li class="bd-list-item yd-bd-r">
+                           <div class="bd-r-top bd-r-item">
+                            <a href="#">
+                                <img class="bd-r-item-1" src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="bd-r-item-2" src="" alt="">
+                            </a>
+                           </div>
+                           <div class="bd-r-bottom bd-r-item">
+                            <a href="#">
+                                <img class="bd-r-item-2" src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="bd-r-item-1" src="" alt="">
+                            </a>
+                           </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+             <!-- 运动区域 -->
+             <div class="layer ld-layer">
+                <div class="layer-hd">
+                   <div class="hd-l">
+                       <div class="hd-title">
+                           <i class="icon iconfont">&#xe60e</i>
+                           <span>运动</span>
+                       </div>
+                   </div>
+                   <div class="hd-r">
+                       <a href="#">
+                           <span>更多</span>
+                           <i class="icon iconfont">&#xe78a</i>
+                       </a>
+                   </div>
+                </div>
+                <div class="layer-bd">
+                    <ul class="layer-bd-list">
+                        <li class="bd-list-item yd-bd-l">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </li>
+                        <li class="bd-list-item yd-bd-r">
+                           <div class="bd-r-top bd-r-item">
+                            <a href="#">
+                                <img class="bd-r-item-1" src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="bd-r-item-2" src="" alt="">
+                            </a>
+                           </div>
+                           <div class="bd-r-bottom bd-r-item">
+                            <a href="#">
+                                <img class="bd-r-item-2" src="" alt="">
+                            </a>
+                            <a href="#">
+                                <img class="bd-r-item-1" src="" alt="">
+                            </a>
+                           </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 内容区结束 -->
+            <!-- 底部 -->
+            <footer class="site-footer">
+                <ul class="footer-list">
+                    <li class="footer-list-item cur">
+                       <a href="">
+                        <i class="icon iconfont">&#xe71c</i>
+                        <span>首页</span>
+                       </a>
+                    </li>
+                    <li class="footer-list-item">
+                        <a href="">
+                         <i class="icon iconfont">&#xe71c</i>
+                         <span>首页</span>
+                        </a>
+                     </li>
+                     <li class="footer-list-item">
+                        <a href="">
+                         <i class="icon iconfont">&#xe71c</i>
+                         <span>首页</span>
+                        </a>
+                     </li>
+                     <li class="footer-list-item">
+                        <a href="">
+                         <i class="icon iconfont">&#xe71c</i>
+                         <span>首页</span>
+                        </a>
+                     </li>
+                     <li class="footer-list-item">
+                        <a href="">
+                         <i class="icon iconfont">&#xe71c</i>
+                         <span>首页</span>
+                        </a>
+                     </li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

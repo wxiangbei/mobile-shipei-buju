@@ -1,0 +1,340 @@
+@import '_base.scss';
+//s=>头部导航
+.top_hd{
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 999;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0 11px;
+    background: linear-gradient(to right,#900758,#f81c5a);
+    width: 100%;
+    height: 38px;
+    //左侧logo
+    .logo_wrap{
+        width: 32px;
+        height: 32px;
+        margin-top: 4px;
+        background: #ccc;
+    }
+    //中间搜索
+    .srch_wrap{
+        flex: 1;
+        padding: 6px 5px;
+        .srch_text{
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 12px;
+            line-height: 24px;
+            font-size: 12px;
+            outline: none;
+            background: #930f3e;
+            padding-left: 1em;
+            color: #fff;
+        }
+        input:-ms-input-placeholder{
+         color: #b38998;
+        }
+        input::-webkit-input-placeholder{
+         color: #b38998;
+        }
+        i{
+            position: absolute;
+            right: 55px;
+            top: 9px;
+            color: #fff;
+        }
+    }
+    
+    //右侧消息
+    .msg_wrap{
+        width: 24px;
+        height: 33px;
+        position: relative;
+        color: #fff;
+        i{
+            font-size: 22px;
+            line-height: 22px;
+        }
+        span{
+            font-size: 12px;
+            line-height: 12px;
+            position: absolute;
+            top: 22px;
+            left: 0;
+        }
+    }
+}
+.scroll_view{
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top: 38px;
+    margin-bottom: 42px;
+}
+
+.swiper-container{
+    position: relative;
+    &::before{
+        @include border1px(#beae8d);
+    }
+    .swiper-wrapper{
+        .swiper-slide{
+            img{
+               vertical-align: middle;
+                width: 6.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+    .swiper-pagination-bullet-active{
+        background: #fff;
+    }
+}
+//网站导航区域
+.site-nav-wrap{
+    .site-nav{
+        background: #fff;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 56px;
+    .site-nav-item{
+        flex: 0 0 36px;
+        font-size: 12px;
+        height: 47px;
+        a{
+            display: block;
+            i{
+                width: 30px;
+                height: 30px;
+                display: block;
+                border-radius: 15px;
+                background: #7f47dd;
+                font-size: 16px;
+                color: #fff;
+                text-align: center;
+                line-height: 30px;
+                margin: 0 auto;
+            }
+            p{
+                font-size: 12px;
+                color: #494949;
+            }
+        }
+    }
+}
+    
+    
+}
+//网站内容区
+$layer-padding:0.22rem;
+$layer-main-color:#ff822f;
+.layer{
+    background: #fff;
+    .layer-hd{
+        height: 0.56rem;
+        position: relative;
+        padding: 0 $layer-padding;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $layer-main-color;
+        &::before{
+            content: '';
+            width: 0.12rem;
+            height: 100%;
+            background: $layer-main-color;
+            display: block;
+            position: absolute;
+            left: $layer-padding;
+            top: 0;
+        }
+        &::after{
+            @include border1px($bd-color);
+        }
+        .hd-l{
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 0.26rem;
+            font-size: 0.3rem;
+            font-weight: bold;
+            .hd-title{
+                i.icon{
+                    font-size: 0.3rem;
+                }
+            }
+            .time-wrap{
+                font-size: 0.24rem;
+                color: #121212;
+                span{
+                    // float: left;
+                    margin-left: 0.05rem;
+                    // display:block;
+                }
+                // word-spacing: 0.04rem;
+                // letter-spacing: 0.04rem;
+                .time-num{
+                    display: inline-block;
+                    line-height: 0.3rem;
+                    height: 0.3rem;
+                    width: 0.22rem;
+                    background: #121212;
+                    font-weight: normal;
+                    color: #fff;
+                    text-align: center;
+                }
+            }
+        }
+        .hd-r{
+            i.icon{
+                display: inline-block; 
+                height: 0.3rem;
+                width: 0.3rem;
+                background: $layer-main-color;
+                color: #fff;
+                border-radius: 0.04rem;
+                font-size: 0.18rem;
+                line-height: 0.3rem;
+                text-align: center;
+            }
+        }
+    }
+    .layer-bd{
+        height: 2.52rem;
+        padding: 0.14rem $layer-padding;
+        box-sizing: border-box;
+        .layer-bd-list{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+//s=>秒杀区域
+.ms-layer{
+    .layer-bd{
+        height: 2.25rem;
+        .layer-bd-list{
+            .bd-list-item{
+                a{
+                    display: block;
+                    position: relative;
+                    &::before{
+                        @include border1px($bd-color,1,1,1,1);
+                    }
+                    img{
+                        display: block;
+                        width: 1.78rem;
+                        height: 1.78rem;
+                        vertical-align: middle;
+                        background: pink;
+                    }
+                }
+                .item-des{
+                    width: 1.78rem;
+                    height: 0.23rem;
+                    font-size: 0.24rem;
+                    color: #ec1a5a;
+                    text-align: center;
+                    line-height: 0.24rem;
+                }
+            }
+        }
+    }
+}
+//e=>秒杀区
+
+//s=>运动区
+.ld-layer{
+    $layer-main-color:#bf0ff9;
+    .layer-hd{
+        color: $layer-main-color;
+        &::before{
+            background: $layer-main-color;
+        }
+        .hd-r{
+            i{
+                background: $layer-main-color !important;
+            }
+        }
+    }
+    .layer-bd{
+        .layer-bd-list{
+            .yd-bd-l{
+                a{
+                    display: block;
+                    img{
+                        display: block;
+                        width: 1.78rem;
+                        height: 2.28rem;
+                        vertical-align: middle;
+                        background: pink;
+                    }
+                }
+            }
+            .yd-bd-r{
+                width:3.98rem;
+                height: 2.28rem;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-between;
+                .bd-r-item{
+                    display: flex;
+                    justify-content: space-around;
+                    a{
+                        display: block;
+                        .bd-r-item-1{
+                            display: block;
+                            width: 1.1rem;
+                            height: 1.03rem;
+                            vertical-align: middle;
+                            background: pink;
+                        }
+                        .bd-r-item-2{
+                            display: block;
+                            width: 2.42rem;
+                            height: 1.03rem;
+                            vertical-align: middle;
+                            background: pink;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.site-footer{
+    position: fixed;height: 40px;
+    background: #171717;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    color: #9b9b9b;
+    .footer-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .footer-list-item{
+            width: 25px;
+            height: 35px;
+            i{
+                font-size: 20px;
+                line-height: 20px;
+                position: relative;
+                top: 3px;
+                left: 2px;
+            }
+            span{
+                font-size: 12px;
+                line-height: 12px;
+                position: relative;
+                top: -3px;
+                text-align: center;
+            }
+        }
+    }
+}

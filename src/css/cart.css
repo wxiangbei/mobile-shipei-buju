@@ -1,0 +1,202 @@
+.top-hd {
+  color: #fff;
+  background: #9e0958;
+  position: relative;
+}
+
+.top-hd h3 {
+  text-align: center;
+  font-size: 0.64rem;
+  font-weight: 700;
+  height: 1.92rem;
+  line-height: 1.92rem;
+}
+
+.top-hd .tp-shopCart-edit {
+  position: absolute;
+  top: 0.64rem;
+  right: 0.55467rem;
+  font-size: 0.59733rem;
+}
+
+.icon_selected {
+  background: #ec1a5a;
+  height: 0.896rem;
+  width: 0.896rem;
+  border-radius: 50%;
+  font-size: 0.64rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.896rem;
+  flex: 0 0 0.896rem;
+}
+
+.goods-list {
+  margin-bottom: 1.87733rem;
+}
+
+.goods-list .goods-item .goods-item-hd {
+  border: 1px solid #ccc;
+  height: 1.536rem;
+  background: #fff;
+  padding-left: 0.55467rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.goods-list .goods-item .goods-item-hd h4 {
+  font-size: 0.59733rem;
+  padding-left: 0.32rem;
+}
+
+.goods-list .goods-item .goods-item-bd {
+  background: #fff;
+  height: 4.56533rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0.55467rem;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-l {
+  padding: 0.384rem;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-l a {
+  display: block;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-l a img {
+  display: block;
+  vertical-align: top;
+  width: 3.94667rem;
+  height: 3.84rem;
+  background: pink;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r {
+  height: 3.84rem;
+  line-height: 0.576rem;
+  margin-left: 0.32rem;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-name {
+  font-size: 0.46933rem;
+  height: 1.152rem;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-sku {
+  font-size: 0.46933rem;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-sku .sku-name {
+  color: #666;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-sku .sku-value {
+  color: #ec1a5a;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .yx-sjicon-wrap {
+  height: 0.36267rem;
+  width: 3.584rem;
+  background: pink;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-price {
+  color: #ec1a5a;
+  font-size: 0.46933rem;
+  line-height: 1.5;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-edit-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 1.024rem;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-edit-wrap .edit-count-wrap {
+  border: 1px solid #ccc;
+  border-radius: px2em(4);
+  overflow: hidden;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-edit-wrap .edit-count-wrap span {
+  font-size: 0.42667rem;
+  padding: 0 0.256rem;
+  float: left;
+  height: 0.85333rem;
+  line-height: 0.85333rem;
+  border-left: 1px solid #ccc;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-edit-wrap .edit-count-wrap span:first-child {
+  border-left: none;
+}
+
+.goods-list .goods-item .goods-item-bd .goods-item-bd-r .goods-item-edit-wrap .edit-btn {
+  font-size: 0.74667rem;
+}
+
+.goods-list .goods-item .goods-item-sep {
+  background: #eee;
+  height: 0.42667rem;
+}
+
+.goods-account-wrap {
+  padding-left: 0.55467rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 1.87733rem;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.goods-account-wrap .account-l {
+  float: left;
+  font-size: 0.68267rem;
+  line-height: 1.87733rem;
+}
+
+.goods-account-wrap .account-l a {
+  display: block;
+}
+
+.goods-account-wrap .account-l i {
+  display: inline-block;
+  height: 0.85333rem;
+  width: 0.85333rem;
+}
+
+.goods-account-wrap .account-r {
+  float: right;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.512rem;
+}
+
+.goods-account-wrap .account-r .account-r-sum {
+  width: 5.07733rem;
+  height: 1.87733rem;
+  line-height: 1.87733rem;
+}
+
+.goods-account-wrap .account-r .account-r-sum .price-num {
+  color: #f61c5a;
+}
+
+.goods-account-wrap .account-r .account-settle {
+  width: 4.736rem;
+  height: 1.87733rem;
+  line-height: 1.87733rem;
+  box-sizing: border-box;
+  color: #fff;
+  background: linear-gradient(to right, #910758, #f61c5a);
+  text-align: center;
+}

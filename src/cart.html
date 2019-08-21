@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- 设置缓存 -->
+        <!-- 设定网页到期时间 -->
+        <meta http-equiv="Expires" content="-1">
+        <!-- 清除缓存（在访问这个网站需要重新下载） -->
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <!-- 禁止浏览器从本地的缓存中调阅网页内容，访问者无法脱机浏览 -->
+        <meta http-equiv="Pragma" content="no-cache">
+        <!-- author用于定义网页作者 -->
+        <meta name="author" content="">
+        <!-- 就是当点击网页添加至主屏幕功能时，会在主屏幕上生成一个图标 点击该图标会进入webapp -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <!-- 当启动webapp功能时 显示手机号 时间 电池的顶部导航栏颜色。默认default -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!-- 添加到主屏幕后 app全屏显示 -->
+        <meta name="apple-touch-fullscreen" content="yes">
+        <!-- 默认设备会自动识别任何可能是电话和 邮箱的字符串 设置telephone=no可以禁用这个功能 -->
+        <meta name='format-detection' content="telephone=no,email=no">
+        <!--uc浏览器私有  -->
+        <!-- 全屏模式 -->
+        <meta name="full-screen" content="yes">
+        <!-- 应用模式 -->
+        <meta name="browsermode" content="application">
+        <!--qq浏览器私有  -->
+        <!-- 全屏模式 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- 应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    
+        <!-- ios下页面自动启动加载时显示的图片 避免加载时白屏 -->
+        <!-- <link rel="apple-touch-startup-image" href="start.png"> -->
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/cart.css">
+        <link rel="stylesheet" href="./font/font_shop/iconfont.css">
+        <script src="./lib/hotcss-master/src/hotcss.js"></script>
+        <script src="./lib/zepto.min.js"></script>
+        <script src="./js/common.js"></script>
+        <title>购物车</title>
+    </head>
+<body>
+    <div class="container">
+        <header class="top-hd">
+            <h3>购物车</h3>
+            <a href="#" class="btn-link tp-shopCart-edit">编辑</a>
+        </header>
+        <main>
+            <div class="goods-list-wrap">
+                <ul class="goods-list">
+                    <li class="goods-item">
+                        <div class="goods-item-hd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <h4 class="goods-shopname">花花公子官方旗舰店</h4>
+                        </div>
+                        <div class="goods-item-bd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <div class="goods-item-bd-l">
+                                <a href="#">
+                                    <img src="" alt="">
+                                </a>
+                            </div>
+                            <div class="goods-item-bd-r">
+                                <p class="goods-item-name">花花公子男装 2019夏款 卫衣 显瘦身 15Dj8C040</p>
+                                <div class="goods-item-sku">
+                                    <span class="sku-name">颜色:</span>
+                                    <span class="sku-value">JK899</span>
+                                    <span class="sku-name">尺码:</span>
+                                    <span class="sku-value">165/5</span>
+                                    <div class="yx-sjicon-wrap"></div>
+                                    <p class="goods-item-price">￥2019</p>
+                                    <div class="goods-item-edit-wrap">
+                                        <div class="edit-count-wrap">
+                                            <span>-</span>
+                                            <span>1</span>
+                                            <span>+</span>
+                                        </div>
+                                        <a href="" class="edit-btn icon iconfont">&#xe60e</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods-item-sep"></div>
+                    </li>
+                    <li class="goods-item">
+                        <div class="goods-item-hd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <h4 class="goods-shopname">花花公子官方旗舰店</h4>
+                        </div>
+                        <div class="goods-item-bd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <div class="goods-item-bd-l">
+                                <a href="#">
+                                    <img src="" alt="">
+                                </a>
+                            </div>
+                            <div class="goods-item-bd-r">
+                                <p class="goods-item-name">花花公子男装 2019夏款 卫衣 显瘦身 15Dj8C040</p>
+                                <div class="goods-item-sku">
+                                    <span class="sku-name">颜色:</span>
+                                    <span class="sku-value">JK899</span>
+                                    <span class="sku-name">尺码:</span>
+                                    <span class="sku-value">165/5</span>
+                                    <div class="yx-sjicon-wrap"></div>
+                                    <p class="goods-item-price">￥2019</p>
+                                    <div class="goods-item-edit-wrap">
+                                        <div class="edit-count-wrap">
+                                            <span>-</span>
+                                            <span>1</span>
+                                            <span>+</span>
+                                        </div>
+                                        <a href="" class="edit-btn icon iconfont">&#xe60e</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods-item-sep"></div>
+                    </li>
+                    <li class="goods-item">
+                        <div class="goods-item-hd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <h4 class="goods-shopname">花花公子官方旗舰店</h4>
+                        </div>
+                        <div class="goods-item-bd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <div class="goods-item-bd-l">
+                                <a href="#">
+                                    <img src="" alt="">
+                                </a>
+                            </div>
+                            <div class="goods-item-bd-r">
+                                <p class="goods-item-name">花花公子男装 2019夏款 卫衣 显瘦身 15Dj8C040</p>
+                                <div class="goods-item-sku">
+                                    <span class="sku-name">颜色:</span>
+                                    <span class="sku-value">JK899</span>
+                                    <span class="sku-name">尺码:</span>
+                                    <span class="sku-value">165/5</span>
+                                    <div class="yx-sjicon-wrap"></div>
+                                    <p class="goods-item-price">￥2019</p>
+                                    <div class="goods-item-edit-wrap">
+                                        <div class="edit-count-wrap">
+                                            <span>-</span>
+                                            <span>1</span>
+                                            <span>+</span>
+                                        </div>
+                                        <a href="" class="edit-btn icon iconfont">&#xe60e</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods-item-sep"></div>
+                    </li>
+                    <li class="goods-item">
+                        <div class="goods-item-hd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <h4 class="goods-shopname">花花公子官方旗舰店</h4>
+                        </div>
+                        <div class="goods-item-bd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <div class="goods-item-bd-l">
+                                <a href="#">
+                                    <img src="" alt="">
+                                </a>
+                            </div>
+                            <div class="goods-item-bd-r">
+                                <p class="goods-item-name">花花公子男装 2019夏款 卫衣 显瘦身 15Dj8C040</p>
+                                <div class="goods-item-sku">
+                                    <span class="sku-name">颜色:</span>
+                                    <span class="sku-value">JK899</span>
+                                    <span class="sku-name">尺码:</span>
+                                    <span class="sku-value">165/5</span>
+                                    <div class="yx-sjicon-wrap"></div>
+                                    <p class="goods-item-price">￥2019</p>
+                                    <div class="goods-item-edit-wrap">
+                                        <div class="edit-count-wrap">
+                                            <span>-</span>
+                                            <span>1</span>
+                                            <span>+</span>
+                                        </div>
+                                        <a href="" class="edit-btn icon iconfont">&#xe60e</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods-item-sep"></div>
+                    </li>
+                    <li class="goods-item">
+                        <div class="goods-item-hd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <h4 class="goods-shopname">花花公子官方旗舰店</h4>
+                        </div>
+                        <div class="goods-item-bd">
+                            <i class="icon iconfont icon_selected">&#xe60e</i>
+                            <div class="goods-item-bd-l">
+                                <a href="#">
+                                    <img src="" alt="">
+                                </a>
+                            </div>
+                            <div class="goods-item-bd-r">
+                                <p class="goods-item-name">花花公子男装 2019夏款 卫衣 显瘦身 15Dj8C040</p>
+                                <div class="goods-item-sku">
+                                    <span class="sku-name">颜色:</span>
+                                    <span class="sku-value">JK899</span>
+                                    <span class="sku-name">尺码:</span>
+                                    <span class="sku-value">165/5</span>
+                                    <div class="yx-sjicon-wrap"></div>
+                                    <p class="goods-item-price">￥2019</p>
+                                    <div class="goods-item-edit-wrap">
+                                        <div class="edit-count-wrap">
+                                            <span>-</span>
+                                            <span>1</span>
+                                            <span>+</span>
+                                        </div>
+                                        <a href="" class="edit-btn icon iconfont">&#xe60e</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods-item-sep"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="goods-account-wrap">
+                <div class="account-l">
+                    <a href="">
+                        <i class="icon iconfont icon_selected">&#xe60e</i>
+                        <span>全选</span>
+                    </a>
+                </div>
+                <div class="account-r">
+                    <div class="account-r-sum">
+                        <span>合计：</span>
+                        <span class="price-num">￥8779.00</span>
+                    </div>
+                    <div class="account-settle">
+                        <span>结算：（3）</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
